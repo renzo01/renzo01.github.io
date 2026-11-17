@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Libro de Reclamaciones — Café de Amanda</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 10px; color: #111; }
+  .sheet { page-break-after: always; padding: 2mm 0; }
+  .sheet:last-child { page-break-after: auto; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start;
+           border-bottom: 2px solid #111; padding-bottom: 3mm; }
+  .brand { font-family: Georgia, serif; font-size: 15px; font-weight: bold; margin-bottom: 1mm; }
+  .brand.big { font-size: 26px; }
+  .prov div { line-height: 1.35; }
+  .num { text-align: right; }
+  .num .title { font-size: 12px; font-weight: bold; letter-spacing: .5px; }
+  .num .n { font-size: 16px; margin-top: 2mm; }
+  .num .year { font-size: 9px; color: #444; }
+  .legal { font-size: 8px; color: #333; margin: 2.5mm 0 3mm; text-align: justify; }
+  h3 { font-size: 9.5px; text-transform: uppercase; letter-spacing: .5px; margin: 3.5mm 0 1.5mm;
+        border-bottom: 1px solid #999; padding-bottom: .8mm; }
+  table.grid { width: 100%; border-collapse: collapse; }
+  table.grid td { border: 1px solid #444; height: 8mm; padding: 1mm 1.5mm; vertical-align: middle; }
+  table.grid td.lbl { background: #f2f2f2; width: 30%; font-size: 8.5px; }
+  .tipo { display: flex; align-items: baseline; gap: 2mm; font-size: 9px; margin-bottom: 1.5mm; }
+  .tipo label { font-weight: bold; }
+  .tipo span { margin-right: 6mm; color: #444; }
+  .lines { border: 1px solid #444; height: 22mm;
+            background: repeating-linear-gradient(to bottom, transparent 0, transparent 6.8mm, #ddd 6.8mm, #ddd 7mm); }
+  .lines.tall { height: 34mm; }
+  .firmas { display: flex; gap: 10mm; margin-top: 8mm; }
+  .firma { flex: 1; text-align: center; font-size: 8.5px; }
+  .firma .line { border-top: 1px solid #111; height: 12mm; }
+  .firma .small { color: #333; margin-top: 1mm; }
+  .foot { margin-top: 6mm; font-size: 7.5px; color: #333; border-top: 1px solid #999; padding-top: 1.5mm; text-align: justify; }
+  .cover { display: flex; flex-direction: column; justify-content: space-between; min-height: 265mm;
+            border: 3px double #111; padding: 14mm; }
+  .cover-top div { line-height: 1.5; }
+  .legal-name { font-size: 12px; font-weight: bold; }
+  .cover-title { font-family: Georgia, serif; font-size: 40px; line-height: 1.05; text-align: center; margin: 12mm 0 4mm; }
+  .cover-sub { text-align: center; font-size: 9px; color: #333; margin-bottom: 10mm; }
+  .cover-box { border: 1px solid #111; padding: 5mm 7mm; font-size: 9px; }
+  .cover-box ol { margin: 2mm 0 0 4mm; padding: 0; }
+  .cover-box li { margin-bottom: 1.5mm; }
+  .cover-foot { font-size: 9px; display: flex; justify-content: space-between; }
+</style></head>
+<body>
+
+<section class="sheet cover">
+  <div class="cover-top">
+    <div class="brand big">Café de Amanda</div>
+    <div class="legal-name">GOMEZ CESARE RENZO MANUEL</div>
+    <div>RUC 10740659851</div>
+    <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+    <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+  </div>
+  <div class="cover-title">LIBRO DE<br/>RECLAMACIONES</div>
+  <div class="cover-sub">Conforme a la Ley 29571 y al D.S. 011-2011-PCM</div>
+  <div class="cover-box">
+    <b>Instrucciones de uso</b>
+    <ol>
+      <li>El libro debe estar visible y disponible en el local.</li>
+      <li>El consumidor llena la hoja con letra clara y firma.</li>
+      <li>El proveedor firma la constancia de recepción y entrega copia.</li>
+      <li>La respuesta se da en un plazo máximo de 30 días calendario.</li>
+      <li>Las hojas se archivan en orden correlativo.</li>
+    </ol>
+  </div>
+  <div class="cover-foot">
+    <div>Responsable: ______________________________</div>
+    <div>Inicio de uso: ____ / ____ / 2026</div>
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 001</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 002</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 003</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 004</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 005</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 006</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 007</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 008</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 009</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="head">
+    <div class="prov">
+      <div class="brand">Café de Amanda</div>
+      <div><b>GOMEZ CESARE RENZO MANUEL</b></div>
+      <div>RUC 10740659851</div>
+      <div>Cal. El Comercio 133, A.H. San Juan Masias, San Borja, Lima</div>
+      <div>Tel. 921 752 732 · renzogomez577@gmail.com</div>
+    </div>
+    <div class="num">
+      <div class="title">HOJA DE RECLAMACIÓN</div>
+      <div class="n">N° 010</div>
+      <div class="year">Año 2026</div>
+    </div>
+  </div>
+
+  <div class="legal">
+    Este establecimiento pone a su disposición el presente Libro de Reclamaciones, conforme al
+    Código de Protección y Defensa del Consumidor (Ley 29571) y su Reglamento (D.S. 011-2011-PCM).
+  </div>
+
+  <h3>1. Datos del consumidor</h3>
+  <table class="grid">
+    <tr><td class="lbl">Nombre completo</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">DNI / CE / Pasaporte</td><td></td><td class="lbl">Teléfono</td><td></td></tr>
+    <tr><td class="lbl">Domicilio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Correo electrónico</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Menor de edad</td><td>Sí ☐ &nbsp; No ☐</td><td class="lbl">Apoderado</td><td></td></tr>
+  </table>
+
+  <h3>2. Identificación del bien o servicio</h3>
+  <table class="grid">
+    <tr><td class="lbl">Producto o servicio</td><td colspan="3"></td></tr>
+    <tr><td class="lbl">Monto (S/)</td><td></td><td class="lbl">Comprobante / fecha</td><td></td></tr>
+  </table>
+
+  <h3>3. Detalle de la reclamación</h3>
+  <div class="tipo">
+    <label>☐ RECLAMO</label><span>Disconformidad con el producto o servicio</span>
+    <label>☐ QUEJA</label><span>Malestar con la atención al público</span>
+  </div>
+  <div class="lines tall"></div>
+
+  <h3>4. Pedido del consumidor</h3>
+  <div class="lines"></div>
+
+  <div class="firmas">
+    <div class="firma">
+      <div class="line"></div>
+      <div>Firma del consumidor</div>
+      <div class="small">Fecha: ____ / ____ / 2026</div>
+    </div>
+    <div class="firma">
+      <div class="line"></div>
+      <div>Constancia de recepción</div>
+      <div class="small">Fecha y hora: ____ / ____ / 2026 &nbsp; ____:____</div>
+      <div class="small">Firma y sello del proveedor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    El proveedor dará respuesta en un plazo no mayor a <b>treinta (30) días calendario</b>.
+    El consumidor puede acudir a INDECOPI si no recibe respuesta o no está conforme.
+    Copia de esta hoja queda en poder del proveedor.
+  </div>
+</section>
+</body></html>
