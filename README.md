@@ -3,6 +3,9 @@
 Sitio de una sola página, sin frameworks, sin base de datos y sin costos mensuales.
 Se puede publicar gratis en GitHub Pages (o en Cloudflare Pages / Netlify).
 
+**En línea:** <https://renzo01.github.io/>
+**Repositorio:** <https://github.com/renzo01/renzo01.github.io>
+
 ```
 web/
 ├── index.html                 ← todo el contenido y los textos
@@ -110,7 +113,6 @@ o bórralo.
 - [ ] Definir **horario de atención** y reemplazar "Abrimos pronto".
 - [ ] Poner **precios** en la carta (hoy no se muestran para no inventarlos).
 - [ ] Agregar las **bebidas** (café, infusiones, jugos) cuando estén definidas.
-- [ ] Actualizar la URL en las etiquetas `og:` cuando la página esté publicada.
 - [ ] Revisar la ubicación exacta en Google Maps (el mapa usa la dirección; si
       el pin no cae bien, reemplazar el `src` del iframe por el enlace
       "Insertar un mapa" de Google Maps).
@@ -120,6 +122,20 @@ o bórralo.
       una constancia (se puede hacer más adelante con un formulario).
 - [ ] Revisar el texto de "Nosotros": está redactado como borrador, ajústalo a
       la historia real de Amanda.
+
+## Cómo actualizar la página
+
+Después de cualquier cambio en `web/`:
+
+```bash
+cd web
+git add .
+git commit -m "Actualizo horario y precios"
+git push
+```
+
+GitHub Pages vuelve a publicar solo en 1–2 minutos. No hay que entrar a
+ningún panel.
 
 ## Costos
 
