@@ -314,8 +314,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.08; m
 
 @media (max-width: 900px) {
   .hero-grid, .about-grid, .visit-grid { grid-template-columns: minmax(0, 1fr); }
-  .hero-art { order: -1; max-width: 320px; margin-inline: auto; }
-  .stamp { width: 84px; height: 84px; font-size: .74rem; right: 0; }
+  .hero-art { order: -1; max-width: 300px; margin-inline: auto; }
+  .stamp { width: 82px; height: 82px; font-size: .72rem; right: 0; }
   .about-art img { aspect-ratio: 4 / 3; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .wa-float { display: grid; }
@@ -326,6 +326,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.08; m
 @media (max-width: 620px) {
   .menu-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-actions .btn { flex: 1 1 auto; }
+  .hero-art { max-width: 248px; }
+  .hero-note { padding-right: 62px; }
 }
 
 @media (max-width: 760px) {
